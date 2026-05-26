@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.SobrePage"
+             Title="Sobre">
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Label Text="SOBRE O APP"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Image Source="dotnet_bot.png"
+                   HeightRequest="180"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Desenvolvedor: Gildo"
+                   FontSize="18"
+                   FontAttributes="Bold"/>
+
+            <Label Text="Projeto desenvolvido com .NET MAUI."
+                   FontSize="18"/>
+
+            <Label Text="Ano: 2026"
+                   FontSize="18"/>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

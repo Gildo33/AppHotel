@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.MainPage"
+             BackgroundColor="#EAF4FC">
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label
+                Text="APP HOTEL"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="#2C3E50"/>
+
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="220"
+                Aspect="AspectFill"/>
+
+            <Label
+                Text="Nome do Hóspede"
+                FontAttributes="Bold"/>
+
+            <Entry
+                x:Name="txtNome"
+                Placeholder="Digite seu nome"/>
+
+            <Label
+                Text="Quantidade de Pessoas"
+                FontAttributes="Bold"/>
+
+            <Stepper
+                x:Name="stepHospedes"
+                Minimum="1"
+                Maximum="10"
+                Increment="1"
+                ValueChanged="Stepper_ValueChanged"/>
+
+            <Label
+                x:Name="lblHospedes"
+                Text="1 Pessoa"/>
+
+            <Label
+                Text="Data da Reserva"
+                FontAttributes="Bold"/>
+
+            <DatePicker
+                x:Name="dateReserva"
+                Format="dd/MM/yyyy"/>
+
+            <Label
+                Text="Tipo de Quarto"
+                FontAttributes="Bold"/>
+
+            <Picker x:Name="pickerQuarto"
+                    Title="Selecione um quarto">
+
+                <Picker.Items>
+                    <x:String>Quarto Simples</x:String>
+                    <x:String>Quarto Luxo</x:String>
+                    <x:String>Suíte Master</x:String>
+                </Picker.Items>
+
+            </Picker>
+
+            <Button
+                Text="Reservar"
+                BackgroundColor="#2E8B57"
+                TextColor="White"
+                FontAttributes="Bold"
+                Clicked="Button_Clicked"/>
+             <Button
+                Text="Sobre"
+                BackgroundColor="#2C3E50"
+                TextColor="White"
+                FontAttributes="Bold"
+                Clicked="Sobre_Clicked"/>   
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
