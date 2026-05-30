@@ -20,19 +20,28 @@
             string nome = txtNome.Text;
             string data = dateReserva.Date.Value.ToShortDateString();
             string? quarto = pickerQuarto.SelectedItem?.ToString();
+            Hospede hospede = new Hospede();
+
+            hospede.Nome = nome;
+
+            hospede.QuantidadePessoas = quantidadeHospedes;
+
+            hospede.Quarto = quarto;
+
+            hospede.DataReserva = data;
 
             if (string.IsNullOrWhiteSpace(nome) || quarto == null)
             {
-                await DisplayAlert("Aviso", "Preencha todos os campos.", "OK");
+                await DisplayAlert("Aviso", "Preencha nome e selecione um quarto.", "OK");
                 return;
             }
 
             await DisplayAlert(
                 "Reserva Realizada",
-                $"Hóspede: {nome}\n" +
-                $"Pessoas: {quantidadeHospedes}\n" +
-                $"Data: {data}\n" +
-                $"Quarto: {quarto}",
+                $"Hóspede: {hospede.Nome}\n" +
+                $"Pessoas: {hospede.QuantidadePessoas}\n" +
+                $"Data: {hospede.DataReserva}\n" +
+                $"Quarto: {hospede.Quarto}",
                 "OK");
         }
 

@@ -68,12 +68,16 @@
             </Picker>
 
             <Button
+               
                 Text="Reservar"
-                BackgroundColor="#2E8B57"
+                BackgroundColor="#FF6B35"
                 TextColor="White"
                 FontAttributes="Bold"
+                CornerRadius="20"
+                HeightRequest="55"
                 Clicked="Button_Clicked"/>
-             <Button
+                
+                <Button
                 Text="Sobre"
                 BackgroundColor="#2C3E50"
                 TextColor="White"
